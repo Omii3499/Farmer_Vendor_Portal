@@ -1,0 +1,57 @@
+{% extends 'Home/home.html' %}
+{% block title %}Register{% endblock title %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<div class="'content-section">
+		<form action ='register' method="POST" class="form-group">
+			{% csrf_token %}
+			<legend class="border-bottom mb-3">Create an Account</legend>
+			{{form|crispy}}
+			<button name="create", type="submit", class="btn btn-success">Register</button>
+		</form>
+	</div>
+{% endblock %}
+
+
+<!-- 
+<html>
+<title>Farmers Portal</title>
+
+<h1 style="color:red;text-align:center;font-size:90px; font-family: ‘Georgia’, serif;font-style: italic;">Kaise Diya</h1>
+<style>
+    p {
+        background-image: url('G:\attachments (2)\Photo.jpg');
+    }
+/* body {
+  background-image: url('');
+  background-repeat: no-repeat;
+background-attachment: fixed;
+  background-size: cover
+} */
+</style>
+<style>
+.button{
+    display: inline-block;
+    margin: 10px; /* space between buttons */
+    background: green; /* background color */
+    color: white; /* text color */
+    font-size: 60px;
+    font-family: ‘Georgia’, serif;
+    font-style: italic;
+    border-radius: 10px; /* rounded corners */
+    padding: 8px 16px; /* space around text */
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+</style>
+<center><a href="Farmers_Portal.html" class="button" style="text-decoration: none;">Farmer's Portal</a>
+<a href="Vendors_Portal.html" class="button" style="text-decoration: none;">Vendor's Portal</a></Center>
+  
+  
+
+
+</body>
+</html> -->
